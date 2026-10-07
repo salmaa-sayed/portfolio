@@ -1,4 +1,4 @@
-"""Refresh thumbnails from Salmaa's supplied public videos; no video downloads."""
+"""Refresh thumbnails from Salma's supplied public videos; no video downloads."""
 import concurrent.futures, json, urllib.request
 from pathlib import Path
 IDS = ['isDsxGrKy_M', '2_83tmPxycc', 'lex8r6LOHu8', 'XN4P5rIAQjU', 'huGofbtz-b4', 'eRFnpAxorso', 'WHof-wzP970', 'dBLbzSQgc6I', 'KIV_ARPy8aA', 'xY_oTtFAGRo', 'z68RErUQRPE', 'USarlIfU78k', 'zvoBdHHm600', 'ODt0ao291vc', 'RtL4B8awR8s', 'VVMzcErR5yo', 'ttAh6XKlP6E', 'c5hBQKr6CWo', '_WOKJZZFybs']

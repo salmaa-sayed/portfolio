@@ -1,5 +1,5 @@
 /* Media engine adapted from marwanrabah/portfolio (functional reference).
-   Salmaa-specific presentation, navigation, and content are independent. */
+   Salma-specific presentation, navigation, and content are independent. */
 const CONTENT = window.SITE_CONTENT;
 const SETTINGS = {
   autoplay: true,

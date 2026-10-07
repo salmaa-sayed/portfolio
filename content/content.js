@@ -3,7 +3,7 @@
    All production videos are local MP4s; source URLs are kept for provenance. */
 window.SITE_CONTENT = {
   playback: { autoplay: true, rememberSound: true, pauseOffscreen: true, viewerEnabled: true },
-  hero: { name: 'Salmaa Sayed', role: 'Motion designer & video editor', featured: 'XN4P5rIAQjU' },
+  hero: { name: 'Salma Sayed', role: 'Motion designer & video editor', featured: 'XN4P5rIAQjU' },
   contact: { whatsapp: 'https://wa.me/201128051982', phone: 'tel:+201128051982', email: 'mailto:salmasayed2811@gmail.com' },
   sections: [
     {

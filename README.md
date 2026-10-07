@@ -1,9 +1,9 @@
-# Salmaa Sayed — Made to move
+# Salma Sayed — Made to move
 
 Website: https://salmaa-sayed.github.io/portfolio/
 
 A complete, content-driven static portfolio for motion graphics and video editing.
-Charcoal and dark grey, white typography, motion paths, and keyframe details form Salmaa's
+Charcoal and dark grey, white typography, deep red accents, motion paths, and keyframe details form Salma's
 own visual identity. There is no runtime framework, build step, account, or
 third-party media request.
 
@@ -93,6 +93,6 @@ No environment variables or external services are required.
 
 Media behavior and the regression-test scenarios were adapted from
 https://github.com/marwanrabah/portfolio (reference commit
-`0bf657a2a4294123af7e21477b1448f703a7bf0a`). Salmaa's design, copy, contact details,
+`0bf657a2a4294123af7e21477b1448f703a7bf0a`). Salma's design, copy, contact details,
 portfolio content, and assets are independent. No Marwan portfolio footage or
 personal content is included. See `DESIGN.md` for the visual direction.

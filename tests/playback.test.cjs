@@ -31,7 +31,7 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
         const errors = []; const external = [];
         page.on('pageerror', error => errors.push(error.message));
         page.on('request', req => { if (new URL(req.url()).origin !== baseURL) external.push(req.url()); });
-        await context.route('**/content/content.js', route => route.fulfill({ contentType:'text/javascript', body:fixtureContent }));
+        await context.route(url => url.pathname === '/content/content.js', route => route.fulfill({ contentType:'text/javascript', body:fixtureContent }));
         try { await run(page); assert.deepEqual(errors, []); if (!allowExternal) assert.deepEqual(external, []); }
         catch (error) { console.error(title, error.stack); throw error; }
         finally { await context.close(); }

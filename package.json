@@ -2,7 +2,7 @@
   "name": "salmaa-sayed-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Salmaa Sayed — motion design and video editing portfolio",
+  "description": "Salma Sayed — motion design and video editing portfolio",
   "scripts": {
     "dev": "node scripts/serve.cjs",
     "start": "node scripts/serve.cjs",
