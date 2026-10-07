@@ -16,7 +16,7 @@ for (const [name,engine] of Object.entries({chromium,webkit})) {
     page.on('pageerror',e=>errors.push(e.message));
     page.on('request',req=>{if(new URL(req.url()).origin!==baseURL) external.push(req.url());});
     await page.goto(baseURL);
-    const count=await page.locator('.video-card').count(); assert.equal(count,18);
+    const count=await page.locator('.video-card').count(); assert.equal(count,19);
     assert.equal(await page.locator('video[src]').count(),0);
     for (const section of ['motion','teasers','reels']) {
       await page.locator(`#${section} .media-expand`).first().click();

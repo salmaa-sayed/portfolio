@@ -23,17 +23,17 @@ seeking. The published site only needs a normal static host.
 playback preferences, and contact links. Move items or sections to reorder them;
 set `enabled: false` to hide a section. Existing media is organized as:
 
-- `media/motion/`: 3 motion projects
+- `media/motion/`: 4 motion projects
 - `media/teasers/`: 4 brand teasers
 - `media/reels/`: 11 reels/work projects
 - `media/posters/`: frames extracted from the same local footage
 - `media/fonts/`: self-hosted Bricolage Grotesque and Manrope, with OFL licenses
 
-All 18 supplied videos are committed as actual `.mp4` files, without Git LFS or
+All 19 supplied videos are committed as actual `.mp4` files, without Git LFS or
 YouTube embeds. Each uses H.264, yuv420p, AAC audio, and a front-loaded `moov`
 atom for progressive playback. Portrait files are capped at 720px high;
 landscape files are capped at 1280×720. Source aspect ratios are preserved.
-The complete library is approximately 24 MB. Original quality is never upscaled.
+The complete library is approximately 25 MiB. Original quality is never upscaled.
 `media/manifest.json` records source URLs, duration, dimensions, codecs, and sizes.
 YouTube is used only during media preparation.
 
@@ -75,7 +75,7 @@ npm test
 The suite uses Google Chrome for Chromium tests and WebKit for Safari behavior.
 Chrome supplies H.264 decoding consistently across development and Linux CI;
 some bundled Chromium builds omit that codec. Tests cover production decoding of
-all 18 MP4s, fast-start encoding, content completeness, exclusive autoplay,
+all 19 MP4s, fast-start encoding, content completeness, exclusive autoplay,
 lazy loading, seek, mute persistence, retry, blocked storage, backgrounding,
 viewer cleanup, focus restoration, keyboard/swipe/drag navigation, browser Back,
 320–1440px viewport bounds, and WCAG A/AA checks with axe. A small generated

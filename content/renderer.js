@@ -827,6 +827,10 @@ document.querySelector('.contact a[href^="tel:"]').href = CONTENT.contact.phone;
 document.documentElement.dataset.sound = soundPreference;
 document.getElementById('year').textContent = new Date().getFullYear();
 setupViewer(); (CONTENT.sections || []).filter(section => section.enabled).forEach(renderSection);
+document.querySelectorAll('[data-count-for]').forEach(label => {
+  const section = CONTENT.sections.find(section => section.id === label.dataset.countFor && section.enabled);
+  label.textContent = String(section?.items.length || 0).padStart(2, '0');
+});
 const featured = mediaRecords.find(record => record.item.id === CONTENT.hero.featured);
 document.getElementById('heroFeature').addEventListener('click', event => openViewer(featured, null, event.currentTarget));
 document.getElementById('heroTeaser').addEventListener('click', event => openViewer(mediaRecords.find(record => record.section.id === 'teasers'), null, event.currentTarget));

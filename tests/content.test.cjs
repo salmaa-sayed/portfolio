@@ -8,11 +8,11 @@ const context = {window:{}};
 vm.runInNewContext(fs.readFileSync(path.join(root, 'content/content.js'),'utf8'), context);
 const content = context.window.SITE_CONTENT;
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'media/manifest.json'),'utf8'));
-const expected = ['2_83tmPxycc','lex8r6LOHu8','XN4P5rIAQjU','huGofbtz-b4','eRFnpAxorso','WHof-wzP970','dBLbzSQgc6I','KIV_ARPy8aA','xY_oTtFAGRo','z68RErUQRPE','USarlIfU78k','zvoBdHHm600','ODt0ao291vc','RtL4B8awR8s','VVMzcErR5yo','ttAh6XKlP6E','c5hBQKr6CWo','_WOKJZZFybs'];
-test('all 18 supplied videos are local, mapped once, and have matching posters', () => {
+const expected = ['isDsxGrKy_M','2_83tmPxycc','lex8r6LOHu8','XN4P5rIAQjU','huGofbtz-b4','eRFnpAxorso','WHof-wzP970','dBLbzSQgc6I','KIV_ARPy8aA','xY_oTtFAGRo','z68RErUQRPE','USarlIfU78k','zvoBdHHm600','ODt0ao291vc','RtL4B8awR8s','VVMzcErR5yo','ttAh6XKlP6E','c5hBQKr6CWo','_WOKJZZFybs'];
+test('all 19 supplied videos are local, mapped once, and have matching posters', () => {
   const items = content.sections.flatMap(section => section.items);
   assert.deepEqual(Array.from(items, item=>item.id).sort(), expected.slice().sort());
-  assert.deepEqual(Array.from(content.sections, section => section.items.length), [3,4,11]);
+  assert.deepEqual(Array.from(content.sections, section => section.items.length), [4,4,11]);
   for (const item of items) {
     assert.ok(!item.embed && !item.external);
     assert.match(item.src, /^media\/(motion|teasers|reels)\/[\w-]+\.mp4$/);

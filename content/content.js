@@ -12,6 +12,7 @@ window.SITE_CONTENT = {
         { id: 'XN4P5rIAQjU', src: 'media/motion/XN4P5rIAQjU.mp4', poster: 'media/posters/XN4P5rIAQjU.jpg', title: 'Americana', subtitle: 'Saudi National Day', format: 'landscape' },
         { id: 'lex8r6LOHu8', src: 'media/motion/lex8r6LOHu8.mp4', poster: 'media/posters/lex8r6LOHu8.jpg', title: 'e&', subtitle: 'Motion design', format: 'landscape', fit: 'contain' },
         { id: '2_83tmPxycc', src: 'media/motion/2_83tmPxycc.mp4', poster: 'media/posters/2_83tmPxycc.jpg', title: 'e&', subtitle: 'Short-form motion', format: 'portrait', fit: 'contain' },
+        { id: 'isDsxGrKy_M', src: 'media/motion/isDsxGrKy_M.mp4', poster: 'media/posters/isDsxGrKy_M.jpg', title: 'Ramadan', subtitle: 'Motion design', format: 'landscape' },
       ],
     },
     {

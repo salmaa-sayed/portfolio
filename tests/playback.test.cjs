@@ -40,7 +40,8 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
     await scenario('blocked storage, no startup media requests, safe autoplay denial', async page => {
       await page.addInitScript(() => Object.defineProperty(window, 'localStorage', { get() { throw new DOMException('Blocked', 'SecurityError'); } }));
       await page.goto(baseURL);
-      assert.equal(await page.locator('.video-card').count(), 18);
+      assert.equal(await page.locator('.video-card').count(), 19);
+      assert.equal(await page.locator('[data-count-for=motion]').textContent(), '04');
       assert.equal(await page.locator('video[src]').count(), 0);
       assert.equal(await page.locator('iframe').count(), 0);
       assert.equal(await page.evaluate(() => safePlay({play:() => Promise.resolve()})), true);
@@ -122,12 +123,12 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
       const bounds = await page.locator('#mediaViewer').boundingBox();
       assert.ok(bounds.x >= 0 && bounds.y >= 0 && bounds.y + bounds.height <= 845);
       await page.keyboard.press('ArrowRight');
-      assert.equal(await page.locator('#viewerCounter').textContent(), '02 / 03');
+      assert.equal(await page.locator('#viewerCounter').textContent(), '02 / 04');
       await page.locator('#viewerMedia').dispatchEvent('pointerdown', {pointerId:1, isPrimary:true, clientX:300, clientY:200});
       await page.locator('#viewerMedia').dispatchEvent('pointerup', {pointerId:1, isPrimary:true, clientX:100, clientY:205});
-      assert.equal(await page.locator('#viewerCounter').textContent(), '03 / 03');
+      assert.equal(await page.locator('#viewerCounter').textContent(), '03 / 04');
       await page.locator('#viewerMedia video').focus(); await page.keyboard.press('ArrowLeft');
-      assert.equal(await page.locator('#viewerCounter').textContent(), '03 / 03');
+      assert.equal(await page.locator('#viewerCounter').textContent(), '03 / 04');
       await page.goBack();
       assert.equal(await page.locator('#mediaViewer').evaluate(e => e.open), false);
       assert.equal(await page.locator('#viewerMedia video').count(), 0);

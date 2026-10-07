@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SOURCE = Path(os.environ.get('SALMAA_SOURCE_DIR', '/private/tmp/salmaa-sources'))
 YTDLP = os.environ.get('YTDLP', 'yt-dlp')
 GROUPS = {
-  'motion': ['2_83tmPxycc', 'lex8r6LOHu8', 'XN4P5rIAQjU'],
+  'motion': ['2_83tmPxycc', 'lex8r6LOHu8', 'XN4P5rIAQjU', 'isDsxGrKy_M'],
   'teasers': ['huGofbtz-b4', 'eRFnpAxorso', 'WHof-wzP970', 'dBLbzSQgc6I'],
   'reels': ['KIV_ARPy8aA', 'xY_oTtFAGRo', 'z68RErUQRPE', 'USarlIfU78k', 'zvoBdHHm600', 'ODt0ao291vc', 'RtL4B8awR8s', 'VVMzcErR5yo', 'ttAh6XKlP6E', 'c5hBQKr6CWo', '_WOKJZZFybs'],
 }
