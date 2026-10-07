@@ -1,5 +1,7 @@
 # Salmaa Sayed — Made to move
 
+Website: https://salmaa-sayed.github.io/portfolio/
+
 A complete, content-driven static portfolio for motion graphics and video editing.
 Charcoal and dark grey, white typography, motion paths, and keyframe details form Salmaa's
 own visual identity. There is no runtime framework, build step, account, or
